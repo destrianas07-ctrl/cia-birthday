@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For Cia 🩵</title>
 
 <style>
@@ -18,25 +19,39 @@ html{
 
 body{
     font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#eaf7ff,#c9e9fa,#b5d9ef);
+    background:#c9e9fa;
     color:#294866;
     overflow-x:hidden;
 }
 
+/* OPENING */
 #opening{
     position:fixed;
-    top:0;
-    left:0;
+    inset:0;
     width:100%;
-    height:100vh;
+    height:100%;
     min-height:100vh;
-    z-index:99999;
+    z-index:9999;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
-    background:linear-gradient(135deg,#eaf8ff,#c8e6f8,#a9cfe9);
-    transition:opacity 1s ease;
+
+    background:linear-gradient(
+        135deg,
+        #eaf8ff,
+        #c8e6f8,
+        #a9cfe9
+    );
+}
+
+#opening.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .8s ease;
 }
 
 .opening-content{
@@ -47,30 +62,54 @@ body{
     font-size:12px;
     letter-spacing:4px;
     color:#557792;
+    margin-bottom:20px;
 }
 
-h1{
+.opening-content h1{
     font-family:Georgia,serif;
-    font-size:60px;
+    font-size:55px;
     font-weight:normal;
-    margin:20px 0;
+    color:#294866;
+    margin-bottom:30px;
 }
 
-button{
+.enter{
     border:0;
     padding:15px 30px;
     border-radius:30px;
     background:white;
     color:#294866;
-    cursor:pointer;
+    font-size:14px;
     box-shadow:0 8px 25px rgba(60,100,130,.15);
 }
 
+/* MUSIC */
+.music{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:1000;
+}
+
+.music button{
+    width:50px;
+    height:50px;
+    border:0;
+    border-radius:50%;
+    background:white;
+    color:#294866;
+    font-size:18px;
+}
+
+/* HERO */
 .hero{
+    height:100vh;
     min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
     padding:30px;
 }
@@ -79,23 +118,30 @@ button{
     letter-spacing:5px;
     font-size:12px;
     color:#5d7d98;
+    margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(45px,12vw,85px);
+    font-family:Georgia,serif;
+    font-size:clamp(45px,12vw,80px);
+    font-weight:normal;
+    color:#294866;
 }
 
-.hero span{
+.hero h1 span{
     color:#6795ba;
 }
 
 .hero p{
+    margin-top:20px;
     color:#5e7890;
 }
 
+/* SECTION */
 section{
     min-height:100vh;
-    padding:100px 25px;
+    padding:90px 25px;
+
     display:flex;
     justify-content:center;
     align-items:center;
@@ -103,25 +149,33 @@ section{
 
 .container{
     width:100%;
-    max-width:800px;
+    max-width:850px;
     text-align:center;
 }
 
 .title{
     font-family:Georgia,serif;
     font-size:40px;
-    margin-bottom:40px;
+    font-weight:normal;
+    color:#294866;
+    margin-bottom:35px;
 }
 
+/* LETTER */
 .letter{
-    background:rgba(255,255,255,.6);
+    background:rgba(255,255,255,.65);
     padding:35px;
     border-radius:25px;
-    line-height:2;
+
     text-align:left;
-    box-shadow:0 10px 40px rgba(70,110,140,.12);
+    line-height:1.9;
+
+    box-shadow:
+        0 10px 35px
+        rgba(70,110,140,.12);
 }
 
+/* CARDS */
 .cards{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -129,56 +183,67 @@ section{
 }
 
 .card{
-    background:rgba(255,255,255,.55);
+    background:rgba(255,255,255,.6);
     padding:30px;
     border-radius:22px;
-    box-shadow:0 10px 30px rgba(70,110,140,.1);
+
+    box-shadow:
+        0 10px 30px
+        rgba(70,110,140,.1);
 }
 
 .card h3{
     font-family:Georgia,serif;
-    margin-bottom:10px;
+    font-size:22px;
+    margin-bottom:12px;
 }
 
 .card p{
-    line-height:1.7;
     color:#678198;
+    line-height:1.7;
 }
 
+/* GIFT */
 .gift{
-    margin-top:20px;
+    border:0;
+    padding:15px 30px;
+    border-radius:30px;
+
+    background:white;
+    color:#294866;
+
+    font-size:15px;
 }
 
 #secret{
     display:none;
-    margin-top:40px;
+
+    margin-top:35px;
+
     font-family:Georgia,serif;
-    font-size:24px;
+    font-size:23px;
     line-height:1.8;
+
+    color:#355b7c;
 }
 
-.music{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    z-index:100;
+#secret.show{
+    display:block;
 }
 
-.music button{
-    width:50px;
-    height:50px;
-    padding:0;
-}
-
+/* FOOTER */
 footer{
-    text-align:center;
     padding:60px 20px;
+    text-align:center;
+
     font-size:12px;
     color:#7190a7;
 }
 
+/* MOBILE */
 @media(max-width:600px){
-    h1{
+
+    .opening-content h1{
         font-size:45px;
     }
 
@@ -189,35 +254,65 @@ footer{
     .title{
         font-size:34px;
     }
+
+    .letter{
+        padding:25px;
+    }
 }
 </style>
 </head>
 
+
 <body>
 
+<!-- OPENING -->
 <div id="opening">
+
     <div class="opening-content">
+
         <div class="small">
             A LITTLE SOMETHING FOR
         </div>
 
-        <h1>Cia 🩵</h1>
+        <h1>
+            Cia 🩵
+        </h1>
 
-        <button onclick="enterWebsite()">
+        <button
+            class="enter"
+            onclick="enterWebsite()">
+
             tap to enter ♫
+
         </button>
+
     </div>
+
 </div>
 
+
+<!-- MUSIC -->
 <audio id="music" loop>
     <source src="hbd.mp3" type="audio/mpeg">
 </audio>
 
+
 <div class="music">
-    <button onclick="toggleMusic()" id="musicButton">♫</button>
+
+    <button
+        onclick="toggleMusic()"
+        id="musicButton">
+
+        ♫
+
+    </button>
+
 </div>
 
+
+<!-- HERO -->
 <section class="hero">
+
     <div class="container">
 
         <div class="date">
@@ -234,9 +329,13 @@ footer{
         </p>
 
     </div>
+
 </section>
 
+
+<!-- LETTER -->
 <section>
+
     <div class="container">
 
         <h2 class="title">
@@ -261,28 +360,42 @@ footer{
             <br>
 
             <p>
-                Semoga di umur lu yang sekarang, banyak hal baik
-                yang datang ke hidup lu.
+                Makasih buat semua cerita, ketawa, drama,
+                random moment, dan hal-hal kecil yang mungkin
+                kelihatannya sepele tapi ternyata berarti.
             </p>
 
             <br>
 
             <p>
-                Semoga apa yang lu pengenin pelan-pelan bisa tercapai.
+                Semoga di umur lu yang sekarang,
+                banyak hal baik yang datang ke hidup lu.
             </p>
 
             <br>
 
             <p>
-                Happy birthday, Cia. Stay being you. 🩵
+                Semoga apa yang lu pengenin pelan-pelan
+                bisa tercapai.
+            </p>
+
+            <br>
+
+            <p>
+                Happy birthday, Cia.
+                Stay being you. 🩵
             </p>
 
         </div>
 
     </div>
+
 </section>
 
+
+<!-- THANK YOU -->
 <section>
+
     <div class="container">
 
         <h2 class="title">
@@ -292,39 +405,178 @@ footer{
         <div class="cards">
 
             <div class="card">
-                <h3>staying</h3>
+
+                <h3>
+                    staying
+                </h3>
+
                 <p>
                     even when things weren't always easy.
                 </p>
+
             </div>
 
-            <div class="card">
-                <h3>listening</h3>
-                <p>
-                    to all my random stories and complaints.
-                </p>
-            </div>
 
             <div class="card">
-                <h3>understanding</h3>
+
+                <h3>
+                    listening
+                </h3>
+
                 <p>
-                    even when I couldn't explain myself properly.
+                    to all my random stories
+                    and complaints.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>being you</h3>
+
+                <h3>
+                    understanding
+                </h3>
+
                 <p>
-                    because that's exactly the Cia I know.
+                    even when I couldn't explain
+                    myself properly.
                 </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    being you
+                </h3>
+
+                <p>
+                    because that's exactly
+                    the Cia I know.
+                </p>
+
             </div>
 
         </div>
 
     </div>
+
 </section>
 
+
+<!-- GIFT -->
 <section>
+
     <div class="container">
 
         <h2 class="title">
+            one last thing...
+        </h2>
+
+        <button
+            class="gift"
+            onclick="openGift()">
+
+            🎁 open this
+
+        </button>
+
+
+        <div id="secret">
+
+            I hope this year is kinder to you,
+
+            <br>
+
+            brings you more reasons to smile,
+
+            <br>
+
+            and gives you everything you've
+            been quietly wishing for.
+
+            <br><br>
+
+            Happy Birthday, Cia. 🩵
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    made specially for Cia ♡
+
+</footer>
+
+
+<script>
+
+/* OPEN WEBSITE */
+
+function enterWebsite(){
+
+    const opening =
+        document.getElementById("opening");
+
+    const music =
+        document.getElementById("music");
+
+    opening.classList.add("hide");
+
+    document.body.style.overflowY = "auto";
+
+    music.volume = 0.5;
+
+    music.play().catch(function(){});
+
+}
+
+
+/* MUSIC */
+
+function toggleMusic(){
+
+    const music =
+        document.getElementById("music");
+
+    const button =
+        document.getElementById("musicButton");
+
+
+    if(music.paused){
+
+        music.play();
+
+        button.innerHTML = "♫";
+
+    }else{
+
+        music.pause();
+
+        button.innerHTML = "🔇";
+
+    }
+
+}
+
+
+/* GIFT */
+
+function openGift(){
+
+    const secret =
+        document.getElementById("secret");
+
+    secret.classList.add("show");
+
+}
+
+</script>
+
+</body>
+    </html>
