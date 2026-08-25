@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>For Cia 🩵</title>
 
 <style>
+
+/* RESET */
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -17,267 +25,476 @@ html{
 }
 
 body{
+
     font-family:Arial,sans-serif;
-    background:#c9e9fa;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eaf7ff,
+        #c9e9fa,
+        #b5d9ef
+    );
+
     color:#294866;
+
     overflow-x:hidden;
 }
 
+
 /* OPENING */
+
 #opening{
+
     position:fixed;
+
     inset:0;
+
     width:100%;
     height:100vh;
+
     z-index:9999;
 
     display:flex;
+
     justify-content:center;
     align-items:center;
 
     text-align:center;
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         135deg,
         #eaf8ff,
         #c8e6f8,
         #a9cfe9
     );
 
-    transition:opacity .8s ease;
+    transition:
+    opacity .8s ease;
+
 }
 
 #opening.hide{
+
     opacity:0;
+
     pointer-events:none;
+
 }
+
 
 .opening-content{
+
     padding:30px;
+
 }
+
 
 .small{
+
     font-size:12px;
+
     letter-spacing:4px;
+
     color:#557792;
+
 }
+
 
 .opening-content h1{
+
     font-family:Georgia,serif;
+
     font-size:55px;
+
     font-weight:normal;
+
     margin:20px 0 30px;
+
 }
 
-.enter,
-.gift{
+
+button{
+
     border:0;
+
     padding:15px 30px;
+
     border-radius:30px;
+
     background:white;
+
     color:#294866;
+
     cursor:pointer;
-    box-shadow:0 8px 25px rgba(60,100,130,.15);
+
+    box-shadow:
+    0 8px 25px
+    rgba(60,100,130,.15);
+
 }
+
 
 /* MUSIC */
+
 .music{
+
     position:fixed;
+
     right:20px;
+
     bottom:20px;
+
     z-index:1000;
+
 }
+
 
 .music button{
+
     width:50px;
+
     height:50px;
+
     padding:0;
-    border:0;
+
     border-radius:50%;
-    background:white;
-    color:#294866;
+
     font-size:18px;
+
 }
+
 
 /* HERO */
+
 .hero{
+
     min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
+
     padding:30px;
+
 }
+
 
 .date{
+
     letter-spacing:5px;
+
     font-size:12px;
+
     color:#5d7d98;
+
 }
+
 
 .hero h1{
+
     font-family:Georgia,serif;
-    font-size:clamp(45px,12vw,80px);
+
+    font-size:
+    clamp(
+        45px,
+        12vw,
+        80px
+    );
+
     font-weight:normal;
+
     margin:20px 0;
+
 }
+
 
 .hero h1 span{
+
     color:#6795ba;
+
 }
+
 
 .hero p{
+
     color:#5e7890;
+
 }
 
+
 /* SECTION */
+
 section{
+
     min-height:100vh;
+
     padding:90px 25px;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
 }
+
 
 .container{
+
     width:100%;
+
     max-width:850px;
+
     text-align:center;
+
 }
+
 
 .title{
+
     font-family:Georgia,serif;
+
     font-size:40px;
+
     font-weight:normal;
+
     margin-bottom:35px;
+
 }
+
 
 /* LETTER */
+
 .letter{
-    background:rgba(255,255,255,.65);
+
+    background:
+    rgba(255,255,255,.65);
+
     padding:35px;
+
     border-radius:25px;
+
     line-height:1.9;
+
     text-align:left;
-    box-shadow:0 10px 35px rgba(70,110,140,.12);
+
+    box-shadow:
+    0 10px 35px
+    rgba(70,110,140,.12);
+
 }
+
 
 /* PHOTOS */
+
 .photos{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:18px;
+
 }
 
+
 .photos img{
+
     width:100%;
+
     height:300px;
+
     object-fit:cover;
+
     border-radius:22px;
 
     box-shadow:
-        0 10px 30px rgba(70,110,140,.15);
+    0 10px 30px
+    rgba(70,110,140,.15);
 
-    transition:transform .3s ease;
+    transition:
+    transform .3s ease;
+
 }
+
 
 .photos img:hover{
-    transform:translateY(-5px);
+
+    transform:
+    translateY(-5px);
+
 }
+
 
 /* CARDS */
+
 .cards{
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+    repeat(2,1fr);
+
     gap:20px;
+
 }
+
 
 .card{
-    background:rgba(255,255,255,.6);
+
+    background:
+    rgba(255,255,255,.6);
+
     padding:30px;
+
     border-radius:22px;
-    box-shadow:0 10px 30px rgba(70,110,140,.1);
+
+    box-shadow:
+    0 10px 30px
+    rgba(70,110,140,.1);
+
 }
+
 
 .card h3{
+
     font-family:Georgia,serif;
+
     margin-bottom:12px;
+
 }
+
 
 .card p{
+
     color:#678198;
+
     line-height:1.7;
+
 }
+
 
 /* SECRET */
+
 #secret{
+
     display:none;
+
     margin-top:35px;
+
     font-family:Georgia,serif;
+
     font-size:23px;
+
     line-height:1.8;
+
 }
+
 
 #secret.show{
+
     display:block;
+
 }
+
 
 footer{
+
     text-align:center;
+
     padding:60px 20px;
+
     font-size:12px;
+
     color:#7190a7;
+
 }
 
+
 /* MOBILE */
+
 @media(max-width:600px){
 
     .opening-content h1{
+
         font-size:45px;
+
     }
+
 
     .photos{
+
         grid-template-columns:1fr;
+
     }
+
 
     .photos img{
+
         height:330px;
+
     }
+
 
     .cards{
+
         grid-template-columns:1fr;
+
     }
+
 
     .title{
+
         font-size:34px;
+
     }
 
+
     .letter{
+
         padding:25px;
+
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <!-- OPENING -->
+
 <div id="opening">
 
     <div class="opening-content">
 
         <div class="small">
+
             A LITTLE SOMETHING FOR
+
         </div>
 
+
         <h1>
+
             Cia 🩵
+
         </h1>
 
+
         <button
-            class="enter"
-            onclick="enterWebsite()">
+        onclick="enterWebsite()">
 
             tap to enter ♫
 
@@ -288,17 +505,26 @@ footer{
 </div>
 
 
+
 <!-- MUSIC -->
-<audio id="music" loop>
-    <source src="hbd.mp3" type="audio/mpeg">
+
+<audio
+id="music"
+loop>
+
+    <source
+    src="hbd.mp3"
+    type="audio/mpeg">
+
 </audio>
+
 
 
 <div class="music">
 
     <button
-        onclick="toggleMusic()"
-        id="musicButton">
+    onclick="toggleMusic()"
+    id="musicButton">
 
         ♫
 
@@ -307,22 +533,37 @@ footer{
 </div>
 
 
+
 <!-- HERO -->
+
 <section class="hero">
 
     <div class="container">
 
         <div class="date">
+
             30 . 08 . 2026
+
         </div>
 
+
         <h1>
+
             Happy Birthday,
-            <span>Cia.</span>
+
+            <span>
+
+                Cia.
+
+            </span>
+
         </h1>
 
+
         <p>
+
             today is your day. 🩵
+
         </p>
 
     </div>
@@ -330,57 +571,95 @@ footer{
 </section>
 
 
+
 <!-- LETTER -->
+
 <section>
 
     <div class="container">
 
         <h2 class="title">
+
             Dear Cia,
+
         </h2>
+
 
         <div class="letter">
 
             <p>
-                Gua sebenernya bingung harus mulai dari mana,
-                karena kalau tentang lu kayaknya satu halaman
+
+                Gua sebenernya bingung
+                harus mulai dari mana,
+
+                karena kalau tentang lu
+                kayaknya satu halaman
                 juga nggak bakal cukup.
+
             </p>
+
 
             <br>
 
+
             <p>
-                Makasih udah jadi salah satu orang yang selalu
-                punya tempat sendiri di hidup gua.
+
+                Makasih udah jadi salah satu
+                orang yang selalu punya tempat
+                sendiri di hidup gua.
+
             </p>
+
 
             <br>
 
+
             <p>
-                Makasih buat semua cerita, ketawa, drama,
-                random moment, dan hal-hal kecil yang mungkin
-                kelihatannya sepele tapi ternyata berarti.
+
+                Makasih buat semua cerita,
+                ketawa, drama,
+                random moment,
+
+                dan hal-hal kecil yang
+                mungkin kelihatannya sepele
+                tapi ternyata berarti.
+
             </p>
+
 
             <br>
 
+
             <p>
+
                 Semoga di umur lu yang sekarang,
-                banyak hal baik yang datang ke hidup lu.
+
+                banyak hal baik yang datang
+                ke hidup lu.
+
             </p>
+
 
             <br>
 
+
             <p>
-                Semoga apa yang lu pengenin pelan-pelan
-                bisa tercapai.
+
+                Semoga apa yang lu pengenin
+                pelan-pelan bisa tercapai.
+
             </p>
+
 
             <br>
 
+
             <p>
+
                 Happy birthday, Cia.
+
                 Stay being you. 🩵
+
             </p>
 
         </div>
@@ -388,88 +667,136 @@ footer{
     </div>
 
 </section>
+
 
 
 <!-- PHOTOS -->
+
 <section>
 
     <div class="container">
 
         <h2 class="title">
+
             Little Memories 🩵
+
         </h2>
+
 
         <div class="photos">
 
-            <img src="cia1.jpg" alt="Cia">
-            <img src="cia2.jpg" alt="Cia">
-            <img src="cia3.jpg" alt="Cia">
+            <img
+            src="cia1.jpg"
+            alt="Cia">
+
+
+            <img
+            src="cia2.jpg"
+            alt="Cia">
+
+
+            <img
+            src="cia3.jpg"
+            alt="Cia">
 
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- THANK YOU -->
+
 <section>
 
     <div class="container">
 
         <h2 class="title">
+
             Thank you for...
+
         </h2>
+
 
         <div class="cards">
 
+
             <div class="card">
 
                 <h3>
+
                     staying
+
                 </h3>
 
                 <p>
-                    even when things weren't always easy.
+
+                    even when things
+                    weren't always easy.
+
                 </p>
 
             </div>
 
+
+
             <div class="card">
 
                 <h3>
+
                     listening
+
                 </h3>
 
                 <p>
-                    to all my random stories and complaints.
+
+                    to all my random stories
+                    and complaints.
+
                 </p>
 
             </div>
 
+
+
             <div class="card">
 
                 <h3>
+
                     understanding
+
                 </h3>
 
                 <p>
-                    even when I couldn't explain myself properly.
+
+                    even when I couldn't
+                    explain myself properly.
+
                 </p>
 
             </div>
+
+
 
             <div class="card">
 
                 <h3>
+
                     being you
+
                 </h3>
 
                 <p>
-                    because that's exactly the Cia I know.
+
+                    because that's exactly
+                    the Cia I know.
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -478,35 +805,42 @@ footer{
 </section>
 
 
+
 <!-- SECRET -->
+
 <section>
 
     <div class="container">
 
         <h2 class="title">
+
             one last thing...
+
         </h2>
 
+
         <button
-            class="gift"
-            onclick="openGift()">
+        onclick="openGift()">
 
             🎁 open this
 
         </button>
 
+
         <div id="secret">
 
-            I hope this year is kinder to you.
+            I hope this year
+            is kinder to you.
 
             <br>
 
-            Brings you more reasons to smile.
+            Brings you more reasons
+            to smile.
 
             <br>
 
-            And gives you everything you've
-            been quietly wishing for.
+            And gives you everything
+            you've been quietly wishing for.
 
             <br><br>
 
@@ -519,6 +853,7 @@ footer{
 </section>
 
 
+
 <footer>
 
     made specially for Cia ♡
@@ -526,67 +861,223 @@ footer{
 </footer>
 
 
+
 <script>
+
+
+/* ENTER WEBSITE */
 
 function enterWebsite(){
 
     const opening =
-        document.getElementById("opening");
+    document.getElementById(
+        "opening"
+    );
+
 
     const music =
-        document.getElementById("music");
+    document.getElementById(
+        "music"
+    );
 
-    opening.classList.add("hide");
 
-    setTimeout(function(){
+    opening.classList.add(
+        "hide"
+    );
 
-        opening.style.display="none";
 
-    },800);
+    setTimeout(
+        function(){
 
-    music.volume=0.5;
+            opening.style.display =
+            "none";
 
-    music.play().catch(function(){});
+        },
+
+        800
+    );
+
+
+    music.volume =
+    0.5;
+
+
+    music.play().catch(
+        function(){}
+    );
 
 }
 
 
+
+/* MUSIC */
+
 function toggleMusic(){
 
     const music =
-        document.getElementById("music");
+    document.getElementById(
+        "music"
+    );
+
 
     const button =
-        document.getElementById("musicButton");
+    document.getElementById(
+        "musicButton"
+    );
 
 
     if(music.paused){
 
         music.play();
 
-        button.innerHTML="♫";
+        button.innerHTML =
+        "♫";
 
-    }else{
+    }
+
+    else{
 
         music.pause();
 
-        button.innerHTML="🔇";
+        button.innerHTML =
+        "🔇";
 
     }
 
 }
 
 
+
+/* GIFT + CONFETTI */
+
 function openGift(){
 
     const secret =
-        document.getElementById("secret");
+    document.getElementById(
+        "secret"
+    );
 
-    secret.classList.add("show");
+
+    secret.classList.add(
+        "show"
+    );
+
+
+    for(
+        let i = 0;
+        i < 80;
+        i++
+    ){
+
+        const confetti =
+        document.createElement(
+            "div"
+        );
+
+
+        confetti.innerHTML =
+        Math.random() > 0.5
+        ? "🩵"
+        : "✦";
+
+
+        confetti.style.position =
+        "fixed";
+
+
+        confetti.style.left =
+        Math.random() * 100
+        + "vw";
+
+
+        confetti.style.top =
+        "-20px";
+
+
+        confetti.style.fontSize =
+        (
+            12 +
+            Math.random() * 18
+        )
+        + "px";
+
+
+        confetti.style.zIndex =
+        "99999";
+
+
+        confetti.style.pointerEvents =
+        "none";
+
+
+        document.body.appendChild(
+            confetti
+        );
+
+
+        const duration =
+        2 +
+        Math.random() * 3;
+
+
+        confetti.animate(
+
+            [
+
+                {
+
+                    transform:
+                    "translateY(0) rotate(0deg)",
+
+                    opacity:1
+
+                },
+
+
+                {
+
+                    transform:
+                    "translateY(110vh) rotate(720deg)",
+
+                    opacity:0
+
+                }
+
+            ],
+
+
+            {
+
+                duration:
+                duration * 1000,
+
+                easing:
+                "ease-out"
+
+            }
+
+        );
+
+
+        setTimeout(
+
+            function(){
+
+                confetti.remove();
+
+            },
+
+            duration * 1000
+
+        );
+
+    }
 
 }
 
 </script>
 
+
 </body>
-        </html>
+
+    </html>
