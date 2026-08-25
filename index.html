@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For Cia 🩵</title>
 
 <style>
@@ -29,8 +28,7 @@ body{
     position:fixed;
     inset:0;
     width:100%;
-    height:100%;
-    min-height:100vh;
+    height:100vh;
     z-index:9999;
 
     display:flex;
@@ -45,13 +43,13 @@ body{
         #c8e6f8,
         #a9cfe9
     );
+
+    transition:opacity .8s ease;
 }
 
 #opening.hide{
     opacity:0;
-    visibility:hidden;
     pointer-events:none;
-    transition:opacity .8s ease;
 }
 
 .opening-content{
@@ -62,24 +60,23 @@ body{
     font-size:12px;
     letter-spacing:4px;
     color:#557792;
-    margin-bottom:20px;
 }
 
 .opening-content h1{
     font-family:Georgia,serif;
     font-size:55px;
     font-weight:normal;
-    color:#294866;
-    margin-bottom:30px;
+    margin:20px 0 30px;
 }
 
-.enter{
+.enter,
+.gift{
     border:0;
     padding:15px 30px;
     border-radius:30px;
     background:white;
     color:#294866;
-    font-size:14px;
+    cursor:pointer;
     box-shadow:0 8px 25px rgba(60,100,130,.15);
 }
 
@@ -94,6 +91,7 @@ body{
 .music button{
     width:50px;
     height:50px;
+    padding:0;
     border:0;
     border-radius:50%;
     background:white;
@@ -103,13 +101,10 @@ body{
 
 /* HERO */
 .hero{
-    height:100vh;
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
     padding:30px;
 }
@@ -118,14 +113,13 @@ body{
     letter-spacing:5px;
     font-size:12px;
     color:#5d7d98;
-    margin-bottom:20px;
 }
 
 .hero h1{
     font-family:Georgia,serif;
     font-size:clamp(45px,12vw,80px);
     font-weight:normal;
-    color:#294866;
+    margin:20px 0;
 }
 
 .hero h1 span{
@@ -133,7 +127,6 @@ body{
 }
 
 .hero p{
-    margin-top:20px;
     color:#5e7890;
 }
 
@@ -157,7 +150,6 @@ section{
     font-family:Georgia,serif;
     font-size:40px;
     font-weight:normal;
-    color:#294866;
     margin-bottom:35px;
 }
 
@@ -166,13 +158,32 @@ section{
     background:rgba(255,255,255,.65);
     padding:35px;
     border-radius:25px;
-
-    text-align:left;
     line-height:1.9;
+    text-align:left;
+    box-shadow:0 10px 35px rgba(70,110,140,.12);
+}
+
+/* PHOTOS */
+.photos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.photos img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:22px;
 
     box-shadow:
-        0 10px 35px
-        rgba(70,110,140,.12);
+        0 10px 30px rgba(70,110,140,.15);
+
+    transition:transform .3s ease;
+}
+
+.photos img:hover{
+    transform:translateY(-5px);
 }
 
 /* CARDS */
@@ -186,15 +197,11 @@ section{
     background:rgba(255,255,255,.6);
     padding:30px;
     border-radius:22px;
-
-    box-shadow:
-        0 10px 30px
-        rgba(70,110,140,.1);
+    box-shadow:0 10px 30px rgba(70,110,140,.1);
 }
 
 .card h3{
     font-family:Georgia,serif;
-    font-size:22px;
     margin-bottom:12px;
 }
 
@@ -203,39 +210,22 @@ section{
     line-height:1.7;
 }
 
-/* GIFT */
-.gift{
-    border:0;
-    padding:15px 30px;
-    border-radius:30px;
-
-    background:white;
-    color:#294866;
-
-    font-size:15px;
-}
-
+/* SECRET */
 #secret{
     display:none;
-
     margin-top:35px;
-
     font-family:Georgia,serif;
     font-size:23px;
     line-height:1.8;
-
-    color:#355b7c;
 }
 
 #secret.show{
     display:block;
 }
 
-/* FOOTER */
 footer{
-    padding:60px 20px;
     text-align:center;
-
+    padding:60px 20px;
     font-size:12px;
     color:#7190a7;
 }
@@ -245,6 +235,14 @@ footer{
 
     .opening-content h1{
         font-size:45px;
+    }
+
+    .photos{
+        grid-template-columns:1fr;
+    }
+
+    .photos img{
+        height:330px;
     }
 
     .cards{
@@ -261,7 +259,6 @@ footer{
 }
 </style>
 </head>
-
 
 <body>
 
@@ -393,6 +390,28 @@ footer{
 </section>
 
 
+<!-- PHOTOS -->
+<section>
+
+    <div class="container">
+
+        <h2 class="title">
+            Little Memories 🩵
+        </h2>
+
+        <div class="photos">
+
+            <img src="cia1.jpg" alt="Cia">
+            <img src="cia2.jpg" alt="Cia">
+            <img src="cia3.jpg" alt="Cia">
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- THANK YOU -->
 <section>
 
@@ -416,7 +435,6 @@ footer{
 
             </div>
 
-
             <div class="card">
 
                 <h3>
@@ -424,12 +442,10 @@ footer{
                 </h3>
 
                 <p>
-                    to all my random stories
-                    and complaints.
+                    to all my random stories and complaints.
                 </p>
 
             </div>
-
 
             <div class="card">
 
@@ -438,12 +454,10 @@ footer{
                 </h3>
 
                 <p>
-                    even when I couldn't explain
-                    myself properly.
+                    even when I couldn't explain myself properly.
                 </p>
 
             </div>
-
 
             <div class="card">
 
@@ -452,8 +466,7 @@ footer{
                 </h3>
 
                 <p>
-                    because that's exactly
-                    the Cia I know.
+                    because that's exactly the Cia I know.
                 </p>
 
             </div>
@@ -465,7 +478,7 @@ footer{
 </section>
 
 
-<!-- GIFT -->
+<!-- SECRET -->
 <section>
 
     <div class="container">
@@ -482,18 +495,17 @@ footer{
 
         </button>
 
-
         <div id="secret">
 
-            I hope this year is kinder to you,
+            I hope this year is kinder to you.
 
             <br>
 
-            brings you more reasons to smile,
+            Brings you more reasons to smile.
 
             <br>
 
-            and gives you everything you've
+            And gives you everything you've
             been quietly wishing for.
 
             <br><br>
@@ -516,8 +528,6 @@ footer{
 
 <script>
 
-/* OPEN WEBSITE */
-
 function enterWebsite(){
 
     const opening =
@@ -528,16 +538,18 @@ function enterWebsite(){
 
     opening.classList.add("hide");
 
-    document.body.style.overflowY = "auto";
+    setTimeout(function(){
 
-    music.volume = 0.5;
+        opening.style.display="none";
+
+    },800);
+
+    music.volume=0.5;
 
     music.play().catch(function(){});
 
 }
 
-
-/* MUSIC */
 
 function toggleMusic(){
 
@@ -552,20 +564,18 @@ function toggleMusic(){
 
         music.play();
 
-        button.innerHTML = "♫";
+        button.innerHTML="♫";
 
     }else{
 
         music.pause();
 
-        button.innerHTML = "🔇";
+        button.innerHTML="🔇";
 
     }
 
 }
 
-
-/* GIFT */
 
 function openGift(){
 
@@ -579,4 +589,4 @@ function openGift(){
 </script>
 
 </body>
-    </html>
+        </html>
