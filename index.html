@@ -1,129 +1,326 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Cia 🩵</title>
 
-    <title>For Cia 🩵</title>
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    <style>
+html{
+    scroll-behavior:smooth;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#eaf7ff,#c9e9fa,#b5d9ef);
+    color:#294866;
+    overflow-x:hidden;
+}
 
-        body {
-            margin: 0;
-            min-height: 100vh;
+#opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#eaf8ff,#c8e6f8,#a9cfe9);
+    transition:1s;
+}
 
-            font-family: Arial, sans-serif;
+.opening-content{
+    padding:30px;
+}
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #e8f7ff,
-                    #c9e9fa,
-                    #b5d9ef
-                );
+.small{
+    font-size:12px;
+    letter-spacing:4px;
+    color:#557792;
+}
 
-            color: #294866;
+h1{
+    font-family:Georgia,serif;
+    font-size:60px;
+    font-weight:normal;
+    margin:20px 0;
+}
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+button{
+    border:0;
+    padding:15px 30px;
+    border-radius:30px;
+    background:white;
+    color:#294866;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(60,100,130,.15);
+}
 
-            text-align: center;
-        }
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
 
-        .container {
-            padding: 30px;
-            max-width: 600px;
-        }
+.date{
+    letter-spacing:5px;
+    font-size:12px;
+    color:#5d7d98;
+}
 
-        .small {
-            letter-spacing: 4px;
-            font-size: 12px;
-            color: #5c7d98;
-        }
+.hero h1{
+    font-size:clamp(45px,12vw,85px);
+}
 
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 60px;
-            font-weight: normal;
-            margin: 20px 0;
-        }
+.hero span{
+    color:#6795ba;
+}
 
-        .date {
-            color: #63829c;
-            letter-spacing: 4px;
-        }
+.hero p{
+    color:#5e7890;
+}
 
-        button {
-            margin-top: 30px;
+section{
+    min-height:100vh;
+    padding:100px 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-            padding: 14px 30px;
+.container{
+    width:100%;
+    max-width:800px;
+    text-align:center;
+}
 
-            border: none;
-            border-radius: 30px;
+.title{
+    font-family:Georgia,serif;
+    font-size:40px;
+    margin-bottom:40px;
+}
 
-            background: white;
+.letter{
+    background:rgba(255,255,255,.6);
+    padding:35px;
+    border-radius:25px;
+    line-height:2;
+    text-align:left;
+    box-shadow:0 10px 40px rgba(70,110,140,.12);
+}
 
-            color: #294866;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
 
-            font-size: 15px;
+.card{
+    background:rgba(255,255,255,.55);
+    padding:30px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(70,110,140,.1);
+}
 
-            cursor: pointer;
+.card h3{
+    font-family:Georgia,serif;
+    margin-bottom:10px;
+}
 
-            box-shadow:
-                0 8px 25px
-                rgba(70,110,140,0.15);
-        }
+.card p{
+    line-height:1.7;
+    color:#678198;
+}
 
-        button:hover {
-            transform: scale(1.05);
-        }
+.gift{
+    margin-top:20px;
+}
 
-    </style>
+#secret{
+    display:none;
+    margin-top:40px;
+    font-family:Georgia,serif;
+    font-size:24px;
+    line-height:1.8;
+}
+
+.music{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:100;
+}
+
+.music button{
+    width:50px;
+    height:50px;
+    padding:0;
+}
+
+footer{
+    text-align:center;
+    padding:60px 20px;
+    font-size:12px;
+    color:#7190a7;
+}
+
+@media(max-width:600px){
+    h1{
+        font-size:45px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:34px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
-    <div class="container">
-
+<div id="opening">
+    <div class="opening-content">
         <div class="small">
             A LITTLE SOMETHING FOR
         </div>
 
+        <h1>Cia 🩵</h1>
 
-        <h1>
-            Cia 🩵
-        </h1>
+        <button onclick="enterWebsite()">
+            tap to enter ♫
+        </button>
+    </div>
+</div>
 
+<audio id="music" loop>
+    <source src="hbd.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music">
+    <button onclick="toggleMusic()" id="musicButton">♫</button>
+</div>
+
+<section class="hero">
+    <div class="container">
 
         <div class="date">
             30 . 08 . 2026
         </div>
 
+        <h1>
+            Happy Birthday,
+            <span>Cia.</span>
+        </h1>
 
-        <button onclick="birthday()">
-            tap to enter ♫
-        </button>
+        <p>
+            today is your day. 🩵
+        </p>
 
     </div>
+</section>
 
+<section>
+    <div class="container">
 
-    <script>
+        <h2 class="title">
+            Dear Cia,
+        </h2>
 
-        function birthday() {
+        <div class="letter">
 
-            alert(
-                "HAPPY BIRTHDAY, CIA! 🎂🩵"
-            );
+            <p>
+                Gua sebenernya bingung harus mulai dari mana,
+                karena kalau tentang lu kayaknya satu halaman
+                juga nggak bakal cukup.
+            </p>
 
-        }
+            <br>
 
-    </script>
+            <p>
+                Makasih udah jadi salah satu orang yang selalu
+                punya tempat sendiri di hidup gua.
+            </p>
 
-</body>
-  </html>
+            <br>
+
+            <p>
+                Semoga di umur lu yang sekarang, banyak hal baik
+                yang datang ke hidup lu.
+            </p>
+
+            <br>
+
+            <p>
+                Semoga apa yang lu pengenin pelan-pelan bisa tercapai.
+            </p>
+
+            <br>
+
+            <p>
+                Happy birthday, Cia. Stay being you. 🩵
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="title">
+            Thank you for...
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>staying</h3>
+                <p>
+                    even when things weren't always easy.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>listening</h3>
+                <p>
+                    to all my random stories and complaints.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>understanding</h3>
+                <p>
+                    even when I couldn't explain myself properly.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>being you</h3>
+                <p>
+                    because that's exactly the Cia I know.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="title">
